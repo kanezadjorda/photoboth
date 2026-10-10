@@ -1,0 +1,6 @@
+{
+  "name": "Aplikasi Photobooth QRIS & Cetak",
+  "description": "Aplikasi Photobooth lokal berbasis web untuk kiosk dan admin staff dengan pembayaran QRIS otomatis, template strip 2x6 dan 4R, kamera live preview, dan cetak printer borderless.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

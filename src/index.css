@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: "Work Sans", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #1a1c1c;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Brutalist button utilities */
+.brutal-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: 3px solid #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  padding: 0.875rem 1.5rem;
+  min-height: 56px;
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1s ease, transform 0.05s ease;
+  user-select: none;
+}
+
+.brutal-btn-primary:hover:not(:disabled) {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.brutal-btn-primary:active:not(:disabled) {
+  border-width: 5px;
+  transform: translate(1px, 1px);
+}
+
+.brutal-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  padding: 0.875rem 1.5rem;
+  min-height: 56px;
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1s ease;
+  user-select: none;
+}
+
+.brutal-btn-secondary:hover:not(:disabled) {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.brutal-btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 3px solid #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  padding: 0.875rem 1.5rem;
+  min-height: 56px;
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.brutal-btn-danger:hover:not(:disabled) {
+  background-color: #000000;
+  color: #ff0000;
+}
+
+.brutal-input {
+  background-color: #f0f0f0;
+  border: 3px solid #000000;
+  color: #1a1c1c;
+  font-family: var(--font-mono);
+  padding: 10px 14px;
+  outline: none;
+  width: 100%;
+}
+
+.brutal-input:focus {
+  border-width: 5px;
+}
+
+.brutal-card {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  padding: 1.5rem;
+}
+
+.brutal-card-thick {
+  background-color: #ffffff;
+  border: 5px solid #000000;
+  padding: 1.5rem;
+}
+
+/* Print CSS */
+@media print {
+  @page {
+    size: 4in 6in;
+    margin: 0;
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-area {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .print-page {
+    page-break-after: always;
+    break-after: page;
+    width: 4in;
+    height: 6in;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen {
+  .print-area {
+    display: none;
+  }
+}
